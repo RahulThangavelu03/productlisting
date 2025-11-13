@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Listing App
 
-## Getting Started
+A responsive Next.js + React + Material UI web application that displays products fetched from a public API. It allows users to search, filter, and browse products efficiently across devices.
 
-First, run the development server:
+---
 
-```bash
+## Features
+
+- Dynamic product grid — responsive layout using Material UI Grid and CSS Grid.
+- Live search — filter products by title or description as you type.
+- Category filter — narrow products by category.
+- Rating filter — show products above a selected rating.
+- Price range slider — filter products within a custom price range.
+- Reset filters — quickly clear all applied filters.
+- Loading state — displays a spinner while fetching data.
+- Error handling — shows a friendly error message and retry option on failure.
+- Responsive design — mobile, tablet, and desktop support.
+
+---
+
+## Tech Stack
+
+- Next.js
+- React 18
+- Material UI (MUI v5)
+- JavaScript (ES6+)
+- Fetch API
+
+---
+
+## API
+
+Product data is fetched from:
+https://dummyjson.com/products
+
+---
+
+## How it works
+
+1. On page load the app fetches products from the API.
+2. Data is held in component state using `useState` and `useEffect`.
+3. Filters (search, category, rating, price range) update state and a derived filtered list is shown.
+4. The grid layout uses responsive breakpoints so the number of columns adapts to screen size.
+
+---
+
+## Installation & Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/RahulThangavelu03/productlisting.git
+
+   ```
+
+2. Change into the project folder
+   cd next-app
+
+3 .Install dependencies
+npm install
+
+4.Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
